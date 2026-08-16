@@ -1,3 +1,30 @@
+# Environment & Secret Credential Files (STRICTLY IGNORED)
+.env
+.env.*
+.env.local
+.env.development
+.env.test
+.env.production
+*.env
+*.pem
+*.key
+*.cert
+credentials.json
+secrets.json
+config.private.js
+
+# Dependencies
+/node_modules
+/.pnpm
+/.yarn
+
+# Build Output
+/.next/
+/out/
+tsconfig.tsbuildinfo
+dist
+dist-ssr
+
 # Logs
 logs
 *.log
@@ -7,18 +34,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
-
-# Environment variables
-.env
-
-# Build output
-.next
-
-# Editor directories and files
+# OS & IDE Files
 .vscode/*
 !.vscode/extensions.json
 .idea
