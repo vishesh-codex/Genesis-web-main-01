@@ -1,5 +1,5 @@
 // pages/api/admin/auth/login.js
-import { executeQuery } from '../../../lib/db.js';
+import { executeQuery } from '@/lib/db.js';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { serialize } from 'cookie';
@@ -96,7 +96,7 @@ export default async function handler(req, res) {
 
     // 2. Fallback to memoryStore.admins if not found in DB
     if (!user) {
-      const { getMemoryAdmins } = await import('../../../lib/memoryStore.js');
+      const { getMemoryAdmins } = await import('@/lib/memoryStore.js');
       const memoryAdmins = getMemoryAdmins();
       user = memoryAdmins.find(a => 
         a.username.toLowerCase() === cleanUsername.toLowerCase() || 
