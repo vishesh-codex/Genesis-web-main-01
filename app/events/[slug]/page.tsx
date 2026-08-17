@@ -868,40 +868,6 @@ export default function EventDetailPage() {
                             <p>📍 {currentEvent.location}</p>
                           </div>
                         </div>
-
-                        {/* AUTO-FILL DEMO DATA PILL BUTTON */}
-                        <Button
-                          type="button"
-                          onClick={() => {
-                            const demoData: Record<string, any> = {}
-                            formFields.forEach(field => {
-                              const key = field.field_name
-                              const lowerKey = key.toLowerCase()
-                              if (lowerKey.includes('qu') || lowerKey.includes('id')) {
-                                demoData[key] = `QU2026-${Math.floor(1000 + Math.random() * 9000)}`
-                              } else if (lowerKey.includes('name')) {
-                                demoData[key] = "Aarav Sharma"
-                              } else if (lowerKey.includes('email')) {
-                                demoData[key] = "aarav.sharma@quantum.edu.in"
-                              } else if (lowerKey.includes('phone') || lowerKey.includes('mobile')) {
-                                demoData[key] = "9876543210"
-                              } else if (lowerKey.includes('company') || lowerKey.includes('institution') || lowerKey.includes('college')) {
-                                demoData[key] = "Quantum University Roorkee"
-                              } else if (field.field_type === 'select' || field.field_type === 'radio') {
-                                demoData[key] = field.field_options?.[0] || 'Option 1'
-                              } else if (field.field_type === 'checkbox') {
-                                demoData[key] = [field.field_options?.[0] || 'Option 1']
-                              } else {
-                                demoData[key] = "Demo Sample Entry"
-                              }
-                            })
-                            setFormData(demoData)
-                          }}
-                          className="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all duration-300 ease-out transform-gpu select-none border dark:border-slate-700/80 bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl dark:text-slate-100 shadow-[0_4px_12px_rgba(0,0,0,0.05),inset_0_1px_1px_rgba(255,255,255,0.6)] dark:shadow-[0_4px_12px_rgba(0,0,0,0.3),inset_0_1px_1px_rgba(255,255,255,0.1)] hover:bg-[#6CBD45]/10 dark:hover:bg-slate-800/90 border-[#6CBD45]/40 text-[#6CBD45] hover:text-[#6CBD45] dark:hover:text-[#6CBD45] hover:shadow-[0_8px_20px_rgba(108,189,69,0.15)] h-8 px-3.5 py-1.5 text-xs rounded-full gap-1 self-start sm:self-auto"
-                        >
-                          <Sparkles className="w-3.5 h-3.5 text-[#6CBD45]" />
-                          <span>Auto-Fill Demo Data</span>
-                        </Button>
                       </div>
 
                       {formLoading ? (

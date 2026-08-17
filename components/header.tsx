@@ -4,7 +4,7 @@ import * as React from "react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
-import { Sparkles, Menu, X, ArrowRight } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { useState } from "react"
 import { ThemeToggle } from "@/components/theme-toggle"
 
@@ -13,20 +13,6 @@ export default function Header() {
 
   return (
     <>
-      {/* Top Announcement Bar */}
-      <div className="bg-gradient-to-r from-[#6CBD45] via-emerald-600 to-green-600 text-white text-center py-2 px-4 text-xs sm:text-sm font-medium flex items-center justify-center gap-2 shadow-sm relative z-50">
-        <Sparkles className="w-4 h-4 animate-pulse shrink-0" />
-        <span>Srijan 4.0 (2026) Innovation Summit is Live!</span>
-        <a
-          href="https://srijan.genesis-quic.in/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline font-bold hover:text-slate-100 flex items-center gap-1 transition-colors"
-        >
-          Learn More <ArrowRight className="w-3.5 h-3.5" />
-        </a>
-      </div>
-
       {/* Main Glassmorphic Header */}
       <header className="sticky top-0 z-50 bg-white/90 dark:bg-[#0f1117]/90 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800/80 text-slate-900 dark:text-white transition-colors duration-300">
         <div className="container mx-auto px-4 lg:px-6 h-20 flex items-center justify-between">

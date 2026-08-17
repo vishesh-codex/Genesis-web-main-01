@@ -250,20 +250,6 @@ export default function EventHistoryPage() {
                   Fill in any or all identifiers to query your registered event history
                 </CardDescription>
               </div>
-
-              {/* Quick Fill Demo Presets */}
-              <div className="flex items-center gap-2">
-                <span className="text-xs text-slate-400 font-mono hidden sm:inline">Quick Demo:</span>
-                <Button
-                  type="button"
-                  variant="outline"
-                  size="sm"
-                  onClick={() => handleFillDemo("QU20261001", "+91 98765 43210", "student@quic.edu.in")}
-                  className="text-xs border-[#6CBD45]/40 text-[#6CBD45] hover:bg-[#6CBD45]/10 rounded-full gap-1"
-                >
-                  <Sparkles className="w-3 h-3" /> Auto-Fill Demo Data
-                </Button>
-              </div>
             </div>
           </CardHeader>
 
@@ -386,13 +372,6 @@ export default function EventHistoryPage() {
                 <p className="text-slate-500 dark:text-slate-400 text-sm max-w-md mx-auto mb-6">
                   We could not find any event registrations matching your search details. Please double-check your QU ID, Phone, or Email.
                 </p>
-                <Button
-                  variant="outline"
-                  onClick={() => handleFillDemo("QU20261001", "+91 98765 43210", "student@quic.edu.in")}
-                  className="border-[#6CBD45] text-[#6CBD45] rounded-full text-xs"
-                >
-                  Try Demo Search ID
-                </Button>
               </Card>
             ) : (
               <div className="grid grid-cols-1 gap-6">
